@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let hoje = new Date();
+        let negociacao = new Negociacao(hoje,2,10);
+   
+        class Calopsita {
+
+            constructor(nome,raca) {
+
+                this.nome = nome;
+                this.raca = raca;
+            }
+            }
+        var calopsita = new Calopsita('Tapioca', 'calopsita do campo');
+        class Pessoa {
+
+        constructor(nome, sobrenome) {
+
+            this.nome = nome;
+            this.sobrenome = sobrenome;
+        }
+        obtemNomeCompleto(){
+            return this.nome + " " + this.sobrenome;
+            }
+        };
+        var flavio = new Pessoa("Flavio","Almeida");
+        flavio.obtemNomeCompleto();
+
+        console.log(flavio.obtemNomeCompleto());
+        
+
+
+        ///////////////outro exercicio
+
+        class Conta {
+
+constructor(titular, conta) {
+
+    this.titular = titular;
+    this.conta = conta;
+    this.saldo = 0.0;
+}
+
+deposita(valor) {
+    console.log('Valor depositado: ' + valor);
+    this.saldo+=valor; 
+}
+}
+
+var conta = new Conta('Mingau', 171);
+conta.deposita(100);
+
+
+
+
+//////
+
+class Conta {
+
+constructor(titular, conta) {
+
+    this._titular = titular;
+    this._conta = conta;
+    this._saldo = 0.0;
+}
+
+deposita(valor) {
+    console.log('Valor depositado: ' + valor);
+    this._saldo+=valor; 
+}
+
+getSaldo() {
+    return this._saldo;
+}
+
+getTitular() {
+    return this._titular;
+}
+
+getConta() {
+    return this._conta;
+}
+}
+
+var conta = new Conta('Mingau', 171);
+conta.deposita(100);
+console.log(conta.getTitular);
+console.log(conta.getConta);
+console.log(conta.getSaldo);
+</script>
+</body>
+</html>
