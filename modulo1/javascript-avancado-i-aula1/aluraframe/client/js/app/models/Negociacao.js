@@ -4,6 +4,7 @@ class Negociacao {
         this._quantidade = quantidade;
         this._valor = valor;
         this._volume = valor * quantidade;
+
         Object.freeze(this);
     };
 
