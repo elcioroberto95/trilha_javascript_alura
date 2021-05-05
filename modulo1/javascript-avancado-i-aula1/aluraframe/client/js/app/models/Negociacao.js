@@ -6,6 +6,7 @@ class Negociacao {
         this._volume = valor * quantidade;
         Object.freeze(this);
     };
+
     get data(){
         return this._data;
     };
@@ -17,6 +18,6 @@ class Negociacao {
     };
     get volume(){
         return this._volume;
-    }
+    };
 
-}
+};
