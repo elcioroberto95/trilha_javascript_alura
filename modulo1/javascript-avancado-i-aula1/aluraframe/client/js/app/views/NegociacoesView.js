@@ -1,4 +1,7 @@
 class NegociacoesView extends View{
+    constructor(element){
+        super(element);
+    }
     
     _template(model) {
         return `
