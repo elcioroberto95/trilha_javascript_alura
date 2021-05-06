@@ -28,6 +28,10 @@ class NegociacoesView {
                 </tbody>
             
                 <tfoot>
+                <td colspan="3"></td>
+                <td>${model.negociacoes.reduce((acc,item) => {
+                    return acc+= Number(item.volume)
+                },0)}</td>
                 </tfoot>
             </table>
              `;
